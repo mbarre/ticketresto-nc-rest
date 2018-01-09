@@ -4,7 +4,7 @@
 
 Rest API to get Ticket Restaurant Nouvelle Calédonie account detail.
 
-This API is deployed on Heroku.
+The service is deployed on Heroku.
 
 ## How to use the service on Heroku
 
