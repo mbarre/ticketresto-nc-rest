@@ -6,15 +6,44 @@ Rest API to get Ticket Restaurant Nouvelle Calédonie account detail.
 
 This API is deployed on Heroku.
 
-## Get your balance
+## How to use the service on Heroku
+
+### Get your balance
 
 ```
 curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/balance
 ```
 
-## Get your account detail
+### Get your account detail
 
 ```
 curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/detail
 ```
 
+## How to make it run on premise
+
+### Set the port
+
+Default port number is *8090*, you can change it by editing the file *application.properties*
+```
+server.port = 8090
+```
+
+### Build the project
+
+```
+mvn clean package
+java -jar target/ticketresto-nc-rest-{version}.jar
+```
+
+### Get your balance
+
+```
+curl http://localhost:8090/accounts/{identifier}/{password}/balance
+```
+
+### Get your account detail
+
+```
+curl http://localhost:8090/accounts/{identifier}/{password}/detail
+```
