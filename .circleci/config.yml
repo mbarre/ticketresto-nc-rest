@@ -41,6 +41,6 @@ jobs:
       - run: mvn integration-test
 deployment:
   release:
-    tag: /*/
+    tag: /.*?/
     heroku:
       appname: ticketresto-nc-rest
