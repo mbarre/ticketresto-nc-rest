@@ -2,6 +2,8 @@ package io.github.mbarre.ticketrestoncrest.service;
 
 import com.github.adriens.tickets.resto.nc.api.ServiceType;
 import com.github.adriens.tickets.resto.nc.api.TicketsRestaurantsServiceWrapper;
+import io.github.mbarre.ticketrestoncrest.exception.InternalErrorException;
+import io.github.mbarre.ticketrestoncrest.exception.ResourceNotFoundException;
 import io.github.mbarre.ticketrestoncrest.model.Account;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,38 +24,47 @@ public class AccountService {
         try {
             wrap = new TicketsRestaurantsServiceWrapper(identifier, password, ServiceType.SOLDE);
 
-            if (!Objects.isNull(wrap)) {
+            if (!Objects.isNull(wrap) && !Objects.isNull(wrap.getAccountName())) {
                 account = new Account();
                 account.setFullName(wrap.getAccountName());
                 account.setEmployer(wrap.getAccountEmployeer());
                 account.setBalance(wrap.getAccountBalance());
+                return account;
+            }
+            else {
+                log.error("TicketsRestaurantsServiceWrapper is null");
+                throw new ResourceNotFoundException(identifier, "Account not found, bad identifier or password.");
             }
 
         }catch (Exception e){
             log.error(e.getMessage());
+            if(Objects.equals("Cet utilisateur n'existe pas", e.getMessage()))
+                throw new ResourceNotFoundException(identifier, "Account not found, bad identifier or password.");
+            else
+                throw new InternalErrorException(e.getMessage());
         }
-        finally {
-            return account;
-        }
-
     }
 
     public Integer getBalance(String identifier, String password) {
-
-        Integer balance = null;
 
         try {
             wrap = new TicketsRestaurantsServiceWrapper(identifier, password, ServiceType.SOLDE);
 
             if (!Objects.isNull(wrap)) {
-                balance = wrap.getAccountBalance();
+                return wrap.getAccountBalance();
+
+            }
+            else {
+                log.error("TicketsRestaurantsServiceWrapper is null");
+                throw new ResourceNotFoundException(identifier, "Account not found, bad identifier or password.");
             }
 
         }catch (Exception e){
             log.error(e.getMessage());
-        }
-        finally {
-            return balance;
+            if(Objects.equals("Cet utilisateur n'existe pas", e.getMessage()))
+                throw new ResourceNotFoundException(identifier, "Account not found, bad identifier or password.");
+            else
+                throw new InternalErrorException(e.getMessage());
         }
 
     }
