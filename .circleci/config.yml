@@ -3,6 +3,11 @@
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
 version: 2
+
+dependencies:
+  pre:
+    - go get github.com/tcnksm/ghr
+
 jobs:
   build:
     docker:
@@ -30,7 +35,10 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: mvn dependency:go-offline
+      - run:
+        - mvn dependency:go-offline
+        - mvn clean package
+        - echo $CIRCLE_ARTIFACTS
 
       - save_cache:
           paths:
@@ -45,3 +53,8 @@ deployment:
     branch: production
     heroku:
       appname: ticketresto-nc-rest
+#  release:
+#      tag: /(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)/
+#      commands:
+#        - ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME --replace `git describe --tags` output/
+
