@@ -35,11 +35,9 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run:
-        - mvn dependency:go-offline
-        - mvn clean package
-        - echo $CIRCLE_ARTIFACTS
-
+      - run: mvn dependency:go-offline
+      - run: mvn clean package
+      - run: echo $CIRCLE_ARTIFACTS
       - save_cache:
           paths:
             - ~/.m2
