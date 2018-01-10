@@ -20,7 +20,7 @@ curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/
 curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/detail
 ```
 
-### Get your transactions from date
+### Get your transactions from a date
 
 ```
 curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/transactions/{from}
