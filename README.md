@@ -20,6 +20,12 @@ curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/
 curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/detail
 ```
 
+### Get your transactions from date
+
+```
+curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/transactions/{from}
+```
+
 ## How to make it run on premise
 
 ### Set the port
