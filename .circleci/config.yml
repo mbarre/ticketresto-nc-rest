@@ -43,7 +43,7 @@ jobs:
             mkdir /tmp/artifacts;
             mv target/ticketresto-nc-rest-*.jar /tmp/artifacts/;
       - store_artifacts:
-        path: /tmp/artifacts
+          path: /tmp/artifacts
       - save_cache:
           paths:
             - ~/.m2
