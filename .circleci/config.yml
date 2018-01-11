@@ -37,7 +37,8 @@ jobs:
 
       - run: mvn dependency:go-offline
       - run: mvn clean package
-      - run: ls -la target/
+      - run: mv target/ticketresto-nc-rest-*.jar $CIRCLE_ARTIFACTS
+      - run: ls -la $CIRCLE_ARTIFACTS
       - save_cache:
           paths:
             - ~/.m2
@@ -45,10 +46,6 @@ jobs:
 
       # run tests!
       - run: mvn integration-test
-
-general:
-  artifacts:
-    - "target/ticketresto-nc-rest-*.jar" # relative to the build directory
 
 
 deployment:
