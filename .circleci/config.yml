@@ -41,7 +41,7 @@ jobs:
           name: Create artifact
           command: |
             mkdir /tmp/artifacts;
-            mv target/ticketresto-nc-rest-*.jar /tmp/artifacts/;
+            cp target/ticketresto-nc-rest-*.jar /tmp/artifacts/;
       - store_artifacts:
           path: /tmp/artifacts
       - save_cache:
@@ -58,8 +58,8 @@ deployment:
     branch: production
     heroku:
       appname: ticketresto-nc-rest
-#  release:
-#      tag: /(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)/
-#      commands:
-#        - ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME --replace `git describe --tags` output/
+  release:
+      tag: /(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)/
+      commands:
+        - ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME --replace `git describe --tags` output/
 
