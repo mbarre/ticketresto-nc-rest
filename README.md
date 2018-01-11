@@ -26,6 +26,10 @@ curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/
 curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/transactions/{from}
 ```
 
+## Postman api documentation
+
+A [public postman documentation](https://documenter.getpostman.com/view/3489712/ticket-resto/7LuYy9B) is maintained : you'll find code samples so you'll be able to use the api from you favourite language (cURL, jQuery, Ruby, Python, Node, PHP, Go).
+
 ## How to make it run on premise
 
 ### Set the port
