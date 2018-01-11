@@ -37,8 +37,13 @@ jobs:
 
       - run: mvn dependency:go-offline
       - run: mvn clean package
-      - run: mv target/ticketresto-nc-rest-*.jar $CIRCLE_ARTIFACTS
-      - run: ls -la $CIRCLE_ARTIFACTS
+      - run:
+          name: Create artifact
+          command: |
+            mkdir /tmp/artifacts;
+            mv target/ticketresto-nc-rest-*.jar /tmp/artifacts/
+      - store_artifacts:
+        path: /tmp/artifacts
       - save_cache:
           paths:
             - ~/.m2
