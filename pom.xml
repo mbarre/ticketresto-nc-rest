@@ -22,7 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<tickets-resto-nc-api.version>1.4</tickets-resto-nc-api.version>
+		<tickets-resto-nc-sdk.version>1.5</tickets-resto-nc-sdk.version>
 	</properties>
 
 	<repositories>
@@ -50,8 +50,8 @@
 
 		<dependency>
 			<groupId>com.github.adriens</groupId>
-			<artifactId>tickets-resto-nc</artifactId>
-			<version>${tickets-resto-nc-api.version}</version>
+			<artifactId>tickets-resto-nc-sdk</artifactId>
+			<version>${tickets-resto-nc-sdk.version}</version>
 		</dependency>
 
 
