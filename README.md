@@ -46,6 +46,32 @@ mvn clean package
 java -jar target/ticketresto-nc-rest-{version}.jar
 ```
 
+or even more straightforward start/stop :
+
+Run it live :
+
+```
+mvn spring-boot:run
+```
+
+
+
+As a background process :
+
+```
+mvn spring-boot:start
+```
+
+and hence to stop it :
+
+```
+mvn spring-boot:stop
+```
+
+
+
+More details on maven ```spring-boot``` goals [here](https://docs.spring.io/spring-boot/docs/current/maven-plugin/plugin-info.html)
+
 ### Get your balance
 
 ```
