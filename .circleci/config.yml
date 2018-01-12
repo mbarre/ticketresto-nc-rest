@@ -62,8 +62,8 @@ jobs:
 
 
 deployment:
-  release:
-      tag: /(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)/
+  trigger_tag:
+      tag: /.*/
       commands:
-        - ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME $CIRCLE_TAG /tmp/artifacts/ || true
+        - ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME $CIRCLE_TAG /tmp/artifacts/
 
