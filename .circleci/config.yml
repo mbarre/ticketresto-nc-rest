@@ -42,8 +42,15 @@ jobs:
           command: |
             mkdir /tmp/artifacts;
             cp target/ticketresto-nc-rest-*.jar /tmp/artifacts/;
+
       - store_artifacts:
           path: /tmp/artifacts
+
+      - run: echo $GITHUB_TOKEN
+      - run: echo $CIRCLE_PROJECT_USERNAME
+      - run: echo $CIRCLE_PROJECT_REPONAME
+      - run: echo $CIRCLE_TAG
+
       - save_cache:
           paths:
             - ~/.m2
@@ -54,10 +61,6 @@ jobs:
 
 
 deployment:
-  production:
-    branch: production
-    heroku:
-      appname: ticketresto-nc-rest
   release:
       tag: /(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)/
       commands:
