@@ -50,6 +50,7 @@ jobs:
       - run: echo $CIRCLE_PROJECT_USERNAME
       - run: echo $CIRCLE_PROJECT_REPONAME
       - run: echo $CIRCLE_TAG
+      - run: echo git describe
 
       - save_cache:
           paths:
