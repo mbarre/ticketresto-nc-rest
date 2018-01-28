@@ -23,7 +23,13 @@ curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/
 ### Get your transactions from a date
 
 ```
-curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/transactions/{from}
+curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/transactions/{ddMMyyyy}
+```
+
+### Get all your transactions
+
+```
+curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/transactions
 ```
 
 ## Postman api documentation
