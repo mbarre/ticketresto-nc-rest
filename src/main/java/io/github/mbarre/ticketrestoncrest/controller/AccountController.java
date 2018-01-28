@@ -31,13 +31,13 @@ public class AccountController {
         return accountService.getBalance(identifier,password);
     }
 
-    @GetMapping("/accounts/{identifier}/{password}/transactions}")
-    public List<Transaction> getTransactions(@PathVariable String identifier, @PathVariable String password) {
+    @GetMapping("/accounts/{identifier}/{password}/transactions")
+    public List<Transaction> getAllTransactions(@PathVariable String identifier, @PathVariable String password) {
         return accountService.getTransactions(identifier, password,null);
     }
 
     @GetMapping("/accounts/{identifier}/{password}/transactions/{from}")
-    public List<Transaction> getTransactions(@PathVariable String identifier, @PathVariable String password, @PathVariable String from) {
+    public List<Transaction> getTransactionsSince(@PathVariable String identifier, @PathVariable String password, @PathVariable String from) {
         SimpleDateFormat formatter = new SimpleDateFormat("ddMMyyyy");
         Date fromDate = null;
         try {
