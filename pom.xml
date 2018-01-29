@@ -5,7 +5,7 @@
 
 	<groupId>io.github.mbarre</groupId>
 	<artifactId>ticketresto-nc-rest</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.3</version>
 	<packaging>jar</packaging>
 
 	<name>ticketresto-nc-rest</name>
@@ -22,7 +22,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<tickets-resto-nc-api.version>1.4</tickets-resto-nc-api.version>
+		<tickets-resto-nc-sdk.version>1.5</tickets-resto-nc-sdk.version>
+		<docker.image.prefix>mbarre</docker.image.prefix>
 	</properties>
 
 	<repositories>
@@ -50,8 +51,8 @@
 
 		<dependency>
 			<groupId>com.github.adriens</groupId>
-			<artifactId>tickets-resto-nc</artifactId>
-			<version>${tickets-resto-nc-api.version}</version>
+			<artifactId>tickets-resto-nc-sdk</artifactId>
+			<version>${tickets-resto-nc-sdk.version}</version>
 		</dependency>
 
 
@@ -68,6 +69,17 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.3.7</version>
+				<configuration>
+					<repository>${docker.image.prefix}/${project.artifactId}</repository>
+					<buildArgs>
+						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
