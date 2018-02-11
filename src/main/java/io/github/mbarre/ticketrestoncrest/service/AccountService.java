@@ -5,6 +5,7 @@ import com.github.adriens.tickets.resto.nc.api.TicketsRestaurantsServiceWrapper;
 import io.github.mbarre.ticketrestoncrest.exception.InternalErrorException;
 import io.github.mbarre.ticketrestoncrest.exception.ResourceNotFoundException;
 import io.github.mbarre.ticketrestoncrest.model.Account;
+import io.github.mbarre.ticketrestoncrest.model.Balance;
 import io.github.mbarre.ticketrestoncrest.model.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,14 +50,13 @@ public class AccountService {
         }
     }
 
-    public Integer getBalance(String identifier, String password) {
+    public Balance getBalance(String identifier, String password) {
 
         try {
             wrap = new TicketsRestaurantsServiceWrapper(identifier, password, ServiceType.SOLDE);
 
             if (!Objects.isNull(wrap)) {
-                return wrap.getAccountBalance();
-
+                return new Balance(wrap.getAccountBalance());
             }
             else {
                 log.error("TicketsRestaurantsServiceWrapper is null");
