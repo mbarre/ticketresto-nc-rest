@@ -2,12 +2,11 @@ package io.github.mbarre.ticketrestoncrest.controller;
 
 import io.github.mbarre.ticketrestoncrest.exception.InternalErrorException;
 import io.github.mbarre.ticketrestoncrest.model.Account;
+import io.github.mbarre.ticketrestoncrest.model.Balance;
 import io.github.mbarre.ticketrestoncrest.model.Transaction;
 import io.github.mbarre.ticketrestoncrest.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -26,8 +25,8 @@ public class AccountController {
         return accountService.getAccountDetails(identifier,password);
     }
 
-    @GetMapping("/accounts/{identifier}/{password}/balance")
-    public Integer getBalance(@PathVariable String identifier, @PathVariable String password) {
+    @GetMapping(value = "/accounts/{identifier}/{password}/balance")
+    public Balance getBalance(@PathVariable String identifier, @PathVariable String password) {
         return accountService.getBalance(identifier,password);
     }
 
