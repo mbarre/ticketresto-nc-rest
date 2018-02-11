@@ -11,6 +11,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -77,6 +79,8 @@ public class AccountService {
 
         try {
             wrap = new TicketsRestaurantsServiceWrapper(identifier, password, ServiceType.BOTH);
+            DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+
 
             List<Transaction> transactions = new ArrayList<>();
             if (!Objects.isNull(wrap)) {
@@ -88,7 +92,7 @@ public class AccountService {
                             transaction.setAmount(trans.getCredit());
                         else
                             transaction.setAmount(-trans.getDebit());
-                        transaction.setDate(trans.getDate());
+                        transaction.setDate(df.format(trans.getDate()));
                         transaction.setDescription(trans.getLibelle());
 
                         transactions.add(transaction);
@@ -113,4 +117,5 @@ public class AccountService {
         }
 
     }
+
 }
