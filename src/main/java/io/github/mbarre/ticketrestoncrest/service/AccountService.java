@@ -79,7 +79,7 @@ public class AccountService {
 
         try {
             wrap = new TicketsRestaurantsServiceWrapper(identifier, password, ServiceType.BOTH);
-            DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 
 
             List<Transaction> transactions = new ArrayList<>();
