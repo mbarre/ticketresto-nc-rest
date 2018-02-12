@@ -2,17 +2,17 @@ package io.github.mbarre.ticketrestoncrest.model;
 
 public class Balance {
 
-    Integer amount;
+    Integer balance;
 
-    public Balance(Integer amount) {
-        this.amount = amount;
+    public Balance(Integer balance) {
+        this.balance = balance;
     }
 
-    public Integer getAmount() {
-        return amount;
+    public Integer getBalance() {
+        return balance;
     }
 
-    public void setAmount(Integer amount) {
-        this.amount = amount;
+    public void setBalance(Integer balance) {
+        this.balance = balance;
     }
 }
