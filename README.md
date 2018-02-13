@@ -32,6 +32,12 @@ curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/
 curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/transactions
 ```
 
+### Get all partners
+
+```
+curl https://ticketresto-nc-rest.herokuapp.com/partners
+```
+
 ## Postman api documentation
 
 A [public postman documentation](https://documenter.getpostman.com/view/3489712/ticket-resto/7LuYy9B) is maintained : you'll find code samples so you'll be able to use the api from you favourite language (cURL, jQuery, Ruby, Python, Node, PHP, Go).
@@ -88,6 +94,24 @@ curl http://localhost:8090/accounts/{identifier}/{password}/balance
 
 ```
 curl http://localhost:8090/accounts/{identifier}/{password}/detail
+```
+
+### Get your transactions from a date
+
+```
+curl https://localhost:8090/accounts/{identifier}/{password}/transactions/{ddMMyyyy}
+```
+
+### Get all your transactions
+
+```
+curl https://localhost:8090/accounts/{identifier}/{password}/transactions
+```
+
+### Get all partners
+
+```
+curl https://localhost:8090/partners
 ```
 
 ## How to use it with Docker
