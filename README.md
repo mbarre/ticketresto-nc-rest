@@ -1,6 +1,4 @@
-[![Dependency Status](https://beta.gemnasium.com/badges/github.com/mbarre/ticketresto-nc-rest.svg)](https://beta.gemnasium.com/projects/github.com/mbarre/ticketresto-nc-rest) [![CircleCI](https://circleci.com/gh/mbarre/ticketresto-nc-rest/tree/master.svg?style=svg)](https://circleci.com/gh/mbarre/ticketresto-nc-rest/tree/master)
-
-[![Join the chat at https://gitter.im/mbarre/ticketresto-nc-rest](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mbarre/ticketresto-nc-rest?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Dependency Status](https://beta.gemnasium.com/badges/github.com/mbarre/ticketresto-nc-rest.svg)](https://beta.gemnasium.com/projects/github.com/mbarre/ticketresto-nc-rest) [![CircleCI](https://circleci.com/gh/mbarre/ticketresto-nc-rest/tree/master.svg?style=svg)](https://circleci.com/gh/mbarre/ticketresto-nc-rest/tree/master) [![Join the chat at https://gitter.im/ticketresto-nc-rest/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ticketresto-nc-rest/Lobby)
 
 # ticketresto-nc-rest
 
