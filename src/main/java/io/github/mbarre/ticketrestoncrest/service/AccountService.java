@@ -93,7 +93,8 @@ public class AccountService {
                         else
                             transaction.setAmount(-trans.getDebit());
                         transaction.setDate(df.format(trans.getDate()));
-                        transaction.setDescription(trans.getLibelle());
+                        if(!Objects.isNull(trans.getLibelle()))
+                            transaction.setDescription(trans.getLibelle().replace("Transaction","").trim());
 
                         transactions.add(transaction);
                     }
