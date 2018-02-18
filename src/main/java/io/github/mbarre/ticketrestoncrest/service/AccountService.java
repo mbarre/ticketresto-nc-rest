@@ -25,7 +25,6 @@ public class AccountService {
     private final Logger log = LoggerFactory.getLogger(AccountService.class);
     private TicketsRestaurantsServiceWrapper wrap;
 
-    @CrossOrigin(origins = "http://localhost:8080")
     public Account getAccountDetails(String identifier, String password) {
 
         Account account = null;
@@ -54,7 +53,6 @@ public class AccountService {
         }
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     public Balance getBalance(String identifier, String password) {
 
         try {
@@ -78,7 +76,6 @@ public class AccountService {
 
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     public List<Transaction> getTransactions(String identifier, String password, Date from) {
 
         try {

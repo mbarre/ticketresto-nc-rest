@@ -18,7 +18,6 @@ public class PartnerService {
     private final Logger log = LoggerFactory.getLogger(AccountService.class);
     private TicketsRestaurantsServiceWrapper wrap;
 
-    @CrossOrigin(origins = "http://localhost:8080")
     public List<Partner> getAllPartners() throws Exception {
 
         List<Partner> allPartners = new ArrayList<>();
