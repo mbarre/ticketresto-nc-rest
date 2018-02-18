@@ -10,6 +10,7 @@ import io.github.mbarre.ticketrestoncrest.model.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -24,6 +25,7 @@ public class AccountService {
     private final Logger log = LoggerFactory.getLogger(AccountService.class);
     private TicketsRestaurantsServiceWrapper wrap;
 
+    @CrossOrigin(origins = "http://localhost:8080")
     public Account getAccountDetails(String identifier, String password) {
 
         Account account = null;
@@ -52,6 +54,7 @@ public class AccountService {
         }
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     public Balance getBalance(String identifier, String password) {
 
         try {
@@ -75,6 +78,7 @@ public class AccountService {
 
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     public List<Transaction> getTransactions(String identifier, String password, Date from) {
 
         try {
