@@ -7,6 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ public class PartnerService {
     private final Logger log = LoggerFactory.getLogger(AccountService.class);
     private TicketsRestaurantsServiceWrapper wrap;
 
+    @CrossOrigin(origins = "http://localhost:8080")
     public List<Partner> getAllPartners() throws Exception {
 
         List<Partner> allPartners = new ArrayList<>();
