@@ -1,4 +1,5 @@
 [![Dependency Status](https://beta.gemnasium.com/badges/github.com/mbarre/ticketresto-nc-rest.svg)](https://beta.gemnasium.com/projects/github.com/mbarre/ticketresto-nc-rest) [![CircleCI](https://circleci.com/gh/mbarre/ticketresto-nc-rest/tree/master.svg?style=svg)](https://circleci.com/gh/mbarre/ticketresto-nc-rest/tree/master) [![Join the chat at https://gitter.im/ticketresto-nc-rest/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ticketresto-nc-rest/Lobby)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/7c95e64c1e730040ea4b)
 
 # ticketresto-nc-rest
 
