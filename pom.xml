@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.mbarre</groupId>
-    <artifactId>ticketresto-nc-rest</artifactId>
-    <version>1.1.6</version>
-    <packaging>jar</packaging>
+	<groupId>io.github.mbarre</groupId>
+	<artifactId>ticketresto-nc-rest</artifactId>
+	<version>1.1.7-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
     <name>ticketresto-nc-rest</name>
     <description>Demo project for Spring Boot</description>
@@ -18,13 +18,14 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <tickets-resto-nc-sdk.version>1.9</tickets-resto-nc-sdk.version>
-        <docker.image.prefix>mbarre</docker.image.prefix>
-    </properties>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<tickets-resto-nc-sdk.version>1.9</tickets-resto-nc-sdk.version>
+		<docker.image.prefix>mbarre</docker.image.prefix>
+	</properties>
 
     <repositories>
         <repository>
