@@ -101,7 +101,6 @@ public class AccountService {
                     }
 
                 }
-                log.error("transactions"+transactions);
                 return transactions;
             }
             else {
