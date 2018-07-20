@@ -115,6 +115,10 @@ curl https://localhost:8090/accounts/{identifier}/{password}/transactions
 curl https://localhost:8090/partners
 ```
 
+# End point output formats
+
+By default, you get json. To get ```xml``` output, just add ```?mediaType=xml``` to the url and you're done. 
+
 ## How to use it with Docker
 
 ### Build the Docker image with Maven

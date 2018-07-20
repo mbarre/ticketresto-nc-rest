@@ -35,4 +35,11 @@ public class Transaction {
     public void setDescription(String description) {
         this.description = description;
     }
+    
+    @Override
+    public String toString(){
+        String out = "";
+        out = "<" + getDescription() + ">:" + "<" + getAmount() + ">";
+        return out;
+    }
 }
