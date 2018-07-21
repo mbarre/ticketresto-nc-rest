@@ -39,6 +39,13 @@ curl https://ticketresto-nc-rest.herokuapp.com/accounts/{identifier}/{password}/
 curl https://ticketresto-nc-rest.herokuapp.com/partners
 ```
 
+... to get them as a ```pdf``` stream :
+
+```
+curl https://ticketresto-nc-rest.herokuapp.com/partners/pdf
+```
+
+
 ## Postman api documentation
 
 A [public postman documentation](https://documenter.getpostman.com/view/3489712/ticket-resto/7LuYy9B) is maintained : you'll find code samples so you'll be able to use the api from you favourite language (cURL, jQuery, Ruby, Python, Node, PHP, Go).

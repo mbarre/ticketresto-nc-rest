@@ -3,11 +3,11 @@ package io.github.mbarre.ticketrestoncrest.service;
 import com.github.adriens.tickets.resto.nc.api.Affilie;
 import com.github.adriens.tickets.resto.nc.api.TicketsRestaurantsServiceWrapper;
 import io.github.mbarre.ticketrestoncrest.model.Partner;
+import java.io.InputStream;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,5 +39,9 @@ public class PartnerService {
             }
 
         return allPartners;
+    }
+    
+    public InputStream getPartnersPdf() throws Exception {
+        return TicketsRestaurantsServiceWrapper.getAffiliesPdf();
     }
 }
