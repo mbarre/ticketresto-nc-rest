@@ -36,6 +36,7 @@ jobs:
           - v1-dependencies-
 
       - run: mvn dependency:go-offline
+      - run: export TZ=Pacific/Noumea
       - run: mvn clean package
       - run:
           name: Create artifact

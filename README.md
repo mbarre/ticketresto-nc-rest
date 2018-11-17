@@ -4,7 +4,7 @@
 
 # ticketresto-nc-rest
 
-Rest API to get Ticket Restaurant Nouvelle Calédonie account detail. It uses https://github.com/adriens/tickets-resto-nc java api developed by @adriens.
+Rest API to get Ticket Restaurant Nouvelle Calédonie account detail. It uses [Tickets Restaurant Java SDK](https://github.com/adriens/tickets-resto-nc-sdk) developed by [@adriens](https://www.linkedin.com/in/adrien-sales/).
 
 The service is deployed on Heroku.
 
