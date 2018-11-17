@@ -23,7 +23,7 @@ jobs:
 
     environment:
       # Customize the JVM maximum heap limit
-      MAVEN_OPTS: -Xmx3200m -DTZ=Pacific/Noumea
+      MAVEN_OPTS: -Xmx3200m
 
     steps:
       - checkout
@@ -36,6 +36,7 @@ jobs:
           - v1-dependencies-
 
       - run: mvn dependency:go-offline
+      - run export TZ=Pacific/Noumea
       - run: mvn clean package
       - run:
           name: Create artifact
