@@ -145,5 +145,4 @@ docker container run -p 8090:8090 mbarre/ticketresto-nc-rest:latest
 docker ps
 CONTAINER ID        IMAGE                               COMMAND                  CREATED             STATUS              PORTS                    NAMES
 c5f0eef3e3b7        mbarre/ticketresto-nc-rest:latest   "java -Djava.secur..."   15 seconds ago      Up 14 seconds       0.0.0.0:8090->8090/tcp   gallant_mayer
-
 ```
