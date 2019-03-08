@@ -5,7 +5,7 @@
 
     <groupId>io.github.mbarre</groupId>
     <artifactId>ticketresto-nc-rest</artifactId>
-    <version>1.1.14-SNAPSHOT</version>
+    <version>1.1.14</version>
     <packaging>jar</packaging>
 
     <name>ticketresto-nc-rest</name>
@@ -23,7 +23,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <tickets-resto-nc-sdk.version>1.14</tickets-resto-nc-sdk.version>
+        <tickets-resto-nc-sdk.version>1.15</tickets-resto-nc-sdk.version>
         <docker.image.prefix>mbarre</docker.image.prefix>
         <dockerfile-maven-plugin.version>1.4.10</dockerfile-maven-plugin.version>
     </properties>
